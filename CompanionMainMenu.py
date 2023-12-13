@@ -24,15 +24,11 @@ from Verbal import Verbal
 from Weather import Weather
 from Emotion import Emotion
 from Arduino import Arduino
+import api_secrets
 
 
-#from Arduino import Arduino
-
-#NOT SECURE! temp work around for api_keys
-openai.api_key = "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"
+openai.api_key = api_secrets.API_KEY_OPENAI_CHATGPT
 #api_keys.API_KEY_OPENAI_CHATGPT
-aai.settings.api_key = "856bc7e213b4441b80549e66b5c90e1f"
-#api_keys.API_KEY_ASSEMBLYAI
 
 timeUtility = TimeUtility()
 verbal = Verbal()

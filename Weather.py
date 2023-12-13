@@ -5,6 +5,7 @@ import requests
 import datetime
 
 from Verbal import Verbal
+import api_secrets
 
 verbal = Verbal()
 
@@ -24,7 +25,7 @@ class Weather:
 		print(city)
 		CITY = city
 		try:
-			openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?appid=5ef2d0ff1cdf1bebea0425d0c0f94f76&q=" + CITY
+			openWeatherUrl = api_secrets.API_OPEN_WEATHER_BASE_URL + CITY
 			#api_secrets.API_OPEN_WEATHER_BASE_URL + "appid=" + api_secrets.API_KEY_OPEN_WEATHER + "&q=" + CITY
 
 			response = requests.get(openWeatherUrl).json()
@@ -55,7 +56,7 @@ class Weather:
 		CITY = city
 		
 		try:
-			openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?appid=5ef2d0ff1cdf1bebea0425d0c0f94f76&q=" + CITY
+			openWeatherUrl = api_secrets.API_OPEN_WEATHER_BASE_URL + CITY
 			#api_secrets.API_OPEN_WEATHER_BASE_URL + "appid=" + api_secrets.API_KEY_OPEN_WEATHER + "&q=" + CITY
 
 
